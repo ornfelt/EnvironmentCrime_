@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "_LoggedInLayout";
+}
+<body>
+    <nav>
+        <ul>
+            <li><a class="reports" asp-controller="Manager" asp-action="StartManager">Start(Ärenden)</a></li>
+            <li class="right"><a class="logout" asp-controller="Home" asp-action="Index">Logga ut</a></li>
+        </ul>
+    </nav><!-- End Nav -->
+
+    <div id="content">
+        <h2>Detaljer för ärendet</h2>
+        <p class="info">Du är inloggad som avdelningschef</p>
+
+        @await Component.InvokeAsync("CrimeErrand", ViewBag.ID)
+
+        <section id="bottomColumn">
+            <h3>Redigera ärende</h3>
+            <p>
+              Ange handläggare:
+            </p>
+                <form asp-controller="Manager" asp-action="SaveInvestigator" asp-route-id=@ViewBag.ID>
+                    <select name="investigator">
+                        <option selected="selected">Välj</option>
+                        @foreach (Employee employee in ViewBag.ListOfEmployees)
+                        {
+                            <option value="@employee.EmployeeId">@employee.EmployeeName</option>
+                        }
+                    </select>
+            
+            <p><input type="checkbox" name="noAction" value="true" /> Ingen åtgärd: <input type="text" name="reason" value="Ange motivering" /></p>
+            <p><input class="button" type="submit" value="Spara" /></p>
+            </form>
+        </section>
+
+        <footer>
+            &copy; Småstads Kommun All rights reserved.
+        </footer>
+    </div><!-- End Content -->
+</body>

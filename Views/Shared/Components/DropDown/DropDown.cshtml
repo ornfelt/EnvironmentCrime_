@@ -1,0 +1,7 @@
+﻿<select name="status">
+  <option selected="selected">Välj alla</option>
+  @foreach (ErrandStatus errandStatus in ViewBag.ListOfStatuses)
+  {
+    <option value="@errandStatus.StatusId">@errandStatus.StatusName</option>
+  }
+</select>

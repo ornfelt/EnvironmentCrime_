@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "_LoggedInLayout";
+}
+<body>
+    <nav>
+        <ul>
+            <li><a class="reports" asp-controller="Investigator" asp-action="StartInvestigator">Start(Ärenden)</a></li>
+            <li class="right"><a class="logout" asp-controller="Home" asp-action="Index">Logga ut</a></li>
+        </ul>
+    </nav><!-- End Nav -->
+
+    <div id="content">
+        <h2>Ärenden</h2>
+        <p class="info">Du är inloggad som handläggare</p>
+        <form asp-controller="Investigator" asp-action="SortInvestigator" method="post">
+            <table id="managerForm">
+                <tr>
+                    <td class="label">Välj status:</td>
+                    <td>&nbsp;</td>
+                    <td class="label">Ärendenummer:</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                            @await Component.InvokeAsync("DropDown")
+                    </td>
+                    <td><input class="button" type="submit" value="Hämta lista" name="submit"/></td>
+                    <td><input name="casenumber" /></td>
+                    <td><input class="button" type="submit" value="Sök" name="submit"/></td>
+                </tr>
+            </table>
+        </form>
+        <!--Nedan ser man en lista på ärenden-->
+        <table>
+            <tr>
+                <th>Ärende anmält</th>
+                <th>Ärendenummer</th>
+                <th>Miljöbrott</th>
+                <th>Status</th>
+                <th>Avdelning</th>
+                <th>Handläggare</th>
+            </tr>
+
+            @foreach (ErrandConnect errandConnect in ViewBag.ListOfErrands)
+            {
+                <tr>
+                    <td>@errandConnect.DateOfObservation.ToString("yyyy/MM/dd")</td>
+                    <td><a asp-controller="Investigator" asp-action="CrimeInvestigator" asp-route-id="@errandConnect.ErrandId">@errandConnect.RefNumber</a></td>
+                    <td>@errandConnect.TypeOfCrime</td>
+                    <td>@errandConnect.StatusName</td>
+                    <td>@errandConnect.DepartmentName</td>
+                    <td>@errandConnect.EmployeeName</td>
+                </tr>
+            }
+
+        </table>
+
+        <footer>
+            &copy; Småstads Kommun All rights reserved.
+        </footer>
+    </div><!-- End Content -->
+</body>

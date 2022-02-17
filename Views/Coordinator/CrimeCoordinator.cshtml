@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "_CoordinatorLayout";
+    @model IEnumerable<Department>
+}
+<body>
+    <div id="content">
+        <h2>Detaljer för ärendet</h2>
+        <p class="info">Du är inloggad som samordnare</p>
+
+        @await Component.InvokeAsync("CrimeErrand", ViewBag.ID)
+
+    <section id="bottomColumn">
+        <h3>Redigera ärende</h3>
+        <p>
+            Ange enhet:
+        </p>
+            <form asp-controller="Coordinator" asp-action="SaveDepartment" asp-route-id=@ViewBag.ID>
+                <select name="department">
+                    <option selected="selected">Välj</option>
+                    @foreach (Department department in Model)
+                    {
+                        if (department.DepartmentName != "Småstads kommun")
+                        {
+                            <option value=@department.DepartmentId>@department.DepartmentName</option>
+                        }
+                    }
+
+                </select>
+        
+        <p><input class="button" type="submit" value="Spara" /></p>
+        </form>
+    </section>
+
+        <footer>
+            &copy; Småstads Kommun All rights reserved.
+        </footer>
+    </div><!-- End Content -->
+</body>

@@ -1,0 +1,41 @@
+﻿@{ 
+    @model LoginModel
+}
+
+	<body>
+        <div id="content">
+            <section id="mainColumn">
+                <h2>Inloggning för Småstads personal</h2>
+                <p class="info">En säker tjänst från Småstads IT-avdelning</p>
+
+                <form method="post" asp-controller="Home" asp-action="Login">
+                    <p>
+                        <input type="hidden" name="isSubmitted" value="true" />
+                    </p>
+                    <p>
+                        <span class="label">Användarnamn:</span><br />
+                        <input asp-for="UserName" type="text" />
+                      <span asp-validation-for="UserName"></span>
+                    </p>
+                    <p>
+                      <span class="label">Lösenord:</span><br />
+                      <input asp-for="Password" type="password" />
+                      <span asp-validation-for="Password"></span>
+                    </p>
+                    <p>
+                        <input class="button" type="submit" value="Logga in" />
+                        <br />
+                        <!--Dessa länkar ska sedan tas bort då det är meningen att vid kontrollen av inloggningsuppgifter så hämtas rätt sida-->
+                        @*<a class="button" asp-controller="Manager" asp-action="StartManager">Inloggning av chefer</a><br />
+                    <a class="button" asp-controller="Investigator" asp-action="StartInvestigator">Inloggning av handläggare</a>*@
+                    </p>
+                </form>
+            </section><!-- End Left -->
+
+            @await Component.InvokeAsync("PictureColumn")
+
+            <footer>
+                &copy; Småstads Kommun All rights reserved.
+            </footer>
+        </div><!-- End Content -->
+	</body>

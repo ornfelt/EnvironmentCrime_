@@ -1,0 +1,60 @@
+﻿@{ 
+    @model Errand
+}
+
+	<body>
+        <div id="content">
+            <section id="mainColumn">
+                <h2>Välkommen att fylla i din anmälan av miljöbrott</h2>
+                <p class="info">I Småstad är inga brott för små för att anmälas</p>
+
+                <p>Fyll i formuläret nedan, alla rutor markerade med stjärna (*) måste fyllas i.</p>
+
+                <form method="post" asp-controller="Citizen" asp-action="Validate">
+                    <p>
+                        <input type="hidden" name="isSubmitted" value="true" />
+                    </p>
+                    <p>
+                        <label class="label" asp-for="Place"></label><br />
+                        <input type="text" asp-for="Place" /> *
+                        <span asp-validation-for="Place"></span><br />
+                    </p>
+                    <p>
+                        <label class="label" asp-for="TypeOfCrime"></label><br />
+                        <input type="text" asp-for="TypeOfCrime" /> *
+                        <span asp-validation-for="TypeOfCrime"></span><br />
+                    </p>
+                    <p>
+                        <label class="label" asp-for="DateOfObservation"></label><br />
+                        <input asp-for="DateOfObservation" /> *
+                        <span asp-validation-for="DateOfObservation"></span><br />
+                    </p>
+                    <p>
+                        <label class="label" asp-for="InformerName"></label><br />
+                        <input type="text" asp-for="InformerName" /> *
+                        <span asp-validation-for="InformerName"></span><br />
+                    </p>
+                    <p>
+                        <label class="label" asp-for="InformerPhone"></label><br />
+                        <input type="text" asp-for="InformerPhone" /> *
+                        <span asp-validation-for="InformerPhone"></span><br />
+                    </p>
+                    <p>
+                        <label class="label" asp-for="Observation"></label><br />
+                        <textarea name="observation" rows="5" cols="16" asp-for="Observation"></textarea><br />
+                        <span class="label">Beskriv din observation<br /> (ex. namn på misstänkt person):</span><br />
+                    </p>
+                    <p>
+                        <input class="button" type="submit" value="Skicka in" />
+                        <input type="reset" />
+                    </p>
+                </form>
+            </section><!-- End Left -->
+
+            @await Component.InvokeAsync("PictureColumn")
+
+            <footer>
+                &copy; Småstads Kommun All rights reserved.
+            </footer>
+        </div><!-- End Content -->
+	</body>

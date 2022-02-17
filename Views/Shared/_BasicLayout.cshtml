@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html xml:lang="sv" lang="sv">
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <title>Småstads kommun</title>
+    <link href="~/stylesheet/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header id="logo">
+            <h1>Småstad</h1>
+            <p>Kommunen där vi bryr oss om varandra</p>
+        </header><!-- End header -->
+
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Hem</a></li>
+                <li><a asp-controller="Citizen" asp-action="Services">Tjänster</a></li>
+                <li><a asp-controller="Citizen" asp-action="Faq">FAQ</a></li>
+                <li><a asp-controller="Citizen" asp-action="Contact">Kontakt</a></li>
+                <li class="right"><a class="login" asp-controller="Home" asp-action="Login">Logga in (endast personal)</a></li>
+            </ul>
+        </nav><!-- End Nav -->
+        @RenderBody()
+    </div>
+</body>
+</html>
