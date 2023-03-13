@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+#nullable disable
+
 namespace EnvironmentCrime.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
@@ -15,16 +17,18 @@ namespace EnvironmentCrime.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "7.0.3")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("EnvironmentCrime.Models.Department", b =>
                 {
                     b.Property<string>("DepartmentId")
-                        .ValueGeneratedOnAdd();
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("DepartmentName");
+                    b.Property<string>("DepartmentName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DepartmentId");
 
@@ -34,13 +38,16 @@ namespace EnvironmentCrime.Migrations
             modelBuilder.Entity("EnvironmentCrime.Models.Employee", b =>
                 {
                     b.Property<string>("EmployeeId")
-                        .ValueGeneratedOnAdd();
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("DepartmentId");
+                    b.Property<string>("DepartmentId")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EmployeeName");
+                    b.Property<string>("EmployeeName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RoleTitle");
+                    b.Property<string>("RoleTitle")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EmployeeId");
 
@@ -51,35 +58,49 @@ namespace EnvironmentCrime.Migrations
                 {
                     b.Property<int>("ErrandID")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("DateOfObservation");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ErrandID"));
 
-                    b.Property<string>("DepartmentId");
+                    b.Property<DateTime>("DateOfObservation")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("EmployeeId");
+                    b.Property<string>("DepartmentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmployeeId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("InformerName")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("InformerPhone")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("InvestigatorAction");
+                    b.Property<string>("InvestigatorAction")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("InvestigatorInfo");
+                    b.Property<string>("InvestigatorInfo")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Observation");
+                    b.Property<string>("Observation")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Place")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RefNumber");
+                    b.Property<string>("RefNumber")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StatusId");
+                    b.Property<string>("StatusId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TypeOfCrime")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ErrandID");
 
@@ -89,9 +110,10 @@ namespace EnvironmentCrime.Migrations
             modelBuilder.Entity("EnvironmentCrime.Models.ErrandStatus", b =>
                 {
                     b.Property<string>("StatusId")
-                        .ValueGeneratedOnAdd();
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("StatusName");
+                    b.Property<string>("StatusName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("StatusId");
 
@@ -102,11 +124,15 @@ namespace EnvironmentCrime.Migrations
                 {
                     b.Property<int>("PictureId")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
-                    b.Property<int>("ErrandId");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PictureId"));
 
-                    b.Property<string>("PictureName");
+                    b.Property<int>("ErrandId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PictureName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PictureId");
 
@@ -119,11 +145,15 @@ namespace EnvironmentCrime.Migrations
                 {
                     b.Property<int>("SampleId")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
-                    b.Property<int>("ErrandId");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SampleId"));
 
-                    b.Property<string>("SampleName");
+                    b.Property<int>("ErrandId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SampleName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SampleId");
 
@@ -136,9 +166,12 @@ namespace EnvironmentCrime.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
-                    b.Property<int>("CurrentValue");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CurrentValue")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -147,18 +180,27 @@ namespace EnvironmentCrime.Migrations
 
             modelBuilder.Entity("EnvironmentCrime.Models.Picture", b =>
                 {
-                    b.HasOne("EnvironmentCrime.Models.Errand")
+                    b.HasOne("EnvironmentCrime.Models.Errand", null)
                         .WithMany("Pictures")
                         .HasForeignKey("ErrandId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("EnvironmentCrime.Models.Sample", b =>
                 {
-                    b.HasOne("EnvironmentCrime.Models.Errand")
+                    b.HasOne("EnvironmentCrime.Models.Errand", null)
                         .WithMany("Samples")
                         .HasForeignKey("ErrandId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EnvironmentCrime.Models.Errand", b =>
+                {
+                    b.Navigation("Pictures");
+
+                    b.Navigation("Samples");
                 });
 #pragma warning restore 612, 618
         }

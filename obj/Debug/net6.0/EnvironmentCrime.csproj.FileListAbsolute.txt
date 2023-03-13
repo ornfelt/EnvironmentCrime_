@@ -1,0 +1,6 @@
+C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime\obj\Debug\net6.0\EnvironmentCrime.csproj.AssemblyReference.cache
+C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime\obj\Debug\net6.0\EnvironmentCrime.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime\obj\Debug\net6.0\EnvironmentCrime.AssemblyInfoInputs.cache
+C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime\obj\Debug\net6.0\EnvironmentCrime.AssemblyInfo.cs
+C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime\obj\Debug\net6.0\EnvironmentCrime.csproj.CoreCompileInputs.cache
+C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime\obj\Debug\net6.0\EnvironmentCrime.MvcApplicationPartsAssemblyInfo.cache

@@ -34,8 +34,10 @@ namespace EnvironmentCrime
                 options.LoginPath = "/Home/Login";
                 options.AccessDeniedPath = "/Home/AccessDenied";
             });
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-            services.AddMvc();
+            //services.AddMvc();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddSession();
         }
 

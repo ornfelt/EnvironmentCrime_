@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EnvironmentCrime
+build_property.RootNamespace = EnvironmentCrime
+build_property.ProjectDir = C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime\
+build_property.RazorLangVersion = 2.1
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Svea User\Downloads\EnvironmentCrime (2)\EnvironmentCrime
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Citizen/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplblxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Citizen/Faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplblxGYXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Citizen/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplblxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Citizen/Thanks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplblxUaGFua3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Citizen/Validate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0aXplblxWYWxpZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Coordinator/CrimeCoordinator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcQ3JpbWVDb29yZGluYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Coordinator/ReportCrime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcUmVwb3J0Q3JpbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Coordinator/StartCoordinator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcU3RhcnRDb29yZGluYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Coordinator/Thanks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcVGhhbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Coordinator/Validate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcVmFsaWRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Home/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Investigator/CrimeInvestigator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0aWdhdG9yXENyaW1lSW52ZXN0aWdhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Investigator/StartInvestigator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0aWdhdG9yXFN0YXJ0SW52ZXN0aWdhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Manager/CrimeManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxDcmltZU1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Manager/StartManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTdGFydE1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Shared/Components/CrimeErrand/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ3JpbWVFcnJhbmRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Shared/Components/DropDown/DropDown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRHJvcERvd25cRHJvcERvd24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Shared/Components/PictureColumn/PictureColumn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUGljdHVyZUNvbHVtblxQaWN0dXJlQ29sdW1uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Shared/CrimeErrandPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENyaW1lRXJyYW5kUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Shared/_BasicLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYXNpY0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Shared/_CoordinatorLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db29yZGluYXRvckxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/Shared/_LoggedInLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dnZWRJbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Svea User/Downloads/EnvironmentCrime (2)/EnvironmentCrime/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
